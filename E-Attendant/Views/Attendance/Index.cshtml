@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewData["Title"] = "Attendance Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">E-Attendance</h1>
+    <form  method="Post" asp-action="Index" asp-controller="Attendance">
+
+        <div class="row">
+            <div class="col m-1">
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="FirstName">
+            </div>
+            <div class="col m-1">
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="LastName">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col m-1">
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" name="Email">
+            </div>
+            <div class="col m-1">
+                <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" name="PhoneNumber">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m-1">
+                <select id="inputState" class="form-select" name="Stack">
+                    <option selected>Choose Stack...</option>
+                    <option value="0">Java</option>
+                    <option value="1">DotNet</option>
+                    <option value="2">Node</option>
+                    <option value="3">Python</option>
+                    <option value="4">Andriod</option>
+                    <option value="5">IOS</option>
+                </select>
+            </div>
+            <div class="col m-1">
+                   
+                <select class="form-select" id="inlineFormSelectPref" name="Gender">
+                    <option selected>Choose Gender...</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                   
+                </select>
+                  
+             </div>
+        </div>
+        <div class="col-12 m-1">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+    </form>
+</div>
