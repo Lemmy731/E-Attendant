@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace E_Attendant.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -13,6 +14,10 @@ namespace E_Attendant.Controllers
             _logger = logger;
         }
 
+        //[Route("")]
+        //[Route("Home")]
+        //[Route("Home/Index")]
+        [HttpGet]
         public IActionResult Index()
         {
             return View();

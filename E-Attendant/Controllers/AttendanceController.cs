@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace E_Attendant.Controllers
 {
+    //[Route("")]
+    //[Route("Attendance")]
+    //[Route("Attendance/Index")]
     public class AttendanceController : Controller
     {
         private readonly IService _service;
@@ -12,11 +15,13 @@ namespace E_Attendant.Controllers
         {
             _service = service;
         }
-        [HttpGet]
+        
         public IActionResult Index()
         {
             return View();
         }
+        
+      
         [HttpPost]  
         public async Task<IActionResult> Index([FromForm]AttendeeVM model)
         {
